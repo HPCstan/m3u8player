@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>关于 - m3u8在线播放器</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="关于 m3u8 在线播放器：免安装、免注册的 HLS/m3u8 与 MP4 在线播放工具，了解使用方法、支援格式与常见问题。">
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        html, body{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .hd {
+            width: 100%;
+            height: 50px;
+            background-color: #0e90d2;
+        }
+
+        .hd .link-list {
+            padding: 0 16px;
+            height: 50px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            align-items: center;
+            align-content: center;
+        }
+
+        .hd .link-list a {
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .hd .link-list a:hover {
+            font-weight: bold;
+        }
+
+        .main {
+            padding: 16px 16px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main h1 {
+            text-align: center;
+            font-size: 30px;
+            color: #0e90d2;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .main h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        .main p {
+            font-size: 15px;
+        }
+
+        .main ul, .main ol {
+            font-size: 15px;
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        .main li {
+            margin-bottom: 6px;
+        }
+
+        .main .alert a {
+            color: #501445;
+            text-decoration: underline;
+        }
+
+        .main .footer {
+            margin-top: 32px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="hd">
+        <div class="link-list">
+            <a href="/">首页</a>
+            <a href="/about.html">关于</a>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <h1>关于本站</h1>
+
+        <p>
+            本站是一款免费的 m3u8 在线播放器，基于 HTML5 与腾讯云播放器 SDK（TCPlayer）开发，
+            支援 m3u8 / HLS 以及 MP4 格式影片的线上播放。无需安装任何软件、无需注册账号，
+            在浏览器打开即可使用。
+        </p>
+
+        <h2>如何使用</h2>
+        <ol>
+            <li>在首页的输入框中贴上 m3u8 或 mp4 播放地址。</li>
+            <li>点击输入框右侧的播放按钮。</li>
+            <li>播放器载入影片后即可开始播放；若未自动播放，请再点一下播放器上的播放键。</li>
+        </ol>
+
+        <h2>支援格式</h2>
+        <ul>
+            <li><strong>m3u8 / HLS</strong>（HTTP Live Streaming）— 常见的线上串流格式。</li>
+            <li><strong>MP4</strong> — 一般网页影片格式。</li>
+        </ul>
+
+        <h2>常见问题</h2>
+        <p>
+            <strong>问：为什么点了播放没有反应？</strong><br>
+            答：请确认播放地址可以公开访问；另外部分情况下需要再点一次播放器上的播放键才会开始播放。
+        </p>
+        <p>
+            <strong>问：为什么某些 m3u8 无法播放？</strong><br>
+            答：部分影片受防盗链或跨域（CORS）限制，播放器无法取得影片片段，这类地址通常无法在浏览器中播放。
+        </p>
+        <p>
+            <strong>问：支持手机吗？</strong><br>
+            答：支持。手机浏览器可直接使用，iOS / Safari 会使用系统原生的 HLS 播放能力。
+        </p>
+
+        <h2>免责声明</h2>
+        <p>
+            本站仅提供影片播放技术，不存放、不储存任何影片内容。所有影片来源均来自互联网，
+            本站不对其内容负责。若任何内容侵犯您的权益，请联系客服予以删除。
+        </p>
+
+        <p class="footer">
+            资源来源于网络，如有侵权，请联系客服予以删除！<br>
+            © 2019 - 2026
+        </p>
+
+    </div>
+
+</body>
+
+</html>
