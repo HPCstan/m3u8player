@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>m3u8播放器</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="可嵌入网页的 m3u8 / HLS / MP4 在线播放器">
+
+    <link href="https://web.sdk.qcloud.com/player/tcplayer/release/v4.9.0/tcplayer.min.css" rel="stylesheet" />
+    <script src="https://web.sdk.qcloud.com/player/tcplayer/release/v4.9.0/tcplayer.v4.9.0.min.js"></script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+        }
+
+        #player-container-id {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        .tip {
+            color: #ccc;
+            font-size: 14px;
+            padding: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <video id="player-container-id" preload="auto" playsinline webkit-playsinline></video>
+
+    <script>
+        (function () {
+            var url = new URLSearchParams(window.location.search).get('url');
+
+            if (!url) {
+                document.getElementById('player-container-id').outerHTML =
+                    '<p class="tip">缺少播放地址，请使用 player.html?url=你的m3u8地址</p>';
+                return;
+            }
+
+            var player = TCPlayer('player-container-id', {
+                sources: [{
+                    src: url,
+                }],
+                // TCPlayer v4.9.0 无需 licenseUrl（腾讯云自 v5.0.0 起才要求 License 授权）
+                autoplay: true,
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
